@@ -25,7 +25,7 @@ app.post("/form", async (req, res) => {
 });
 
 //Test Route
-app.get("/test", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Hello world");
 });
 
