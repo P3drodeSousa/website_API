@@ -8,7 +8,7 @@ const { sendEmail } = require("./mail");
 app.use(express.json({ extended: false }));
 app.use(cors());
 
-//Route
+//Routes
 app.post("/form", async (req, res) => {
   try {
     await schema.validate(req.body);
