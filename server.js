@@ -24,6 +24,11 @@ app.post("/form", async (req, res) => {
   }
 });
 
+//Routes
+app.get("/form", (req, res) => {
+  res.send("form");
+});
+
 //Test Route
 app.get("/", (req, res) => {
   res.send("Hello world");
