@@ -13,7 +13,7 @@ app.post("/form", async (req, res) => {
   try {
     await schema.validate(req.body);
     const ok = await sendEmail(req.body);
-
+    
     if (!ok) {
       throw new Error("Email sender failed ;(");
     }
