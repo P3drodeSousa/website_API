@@ -8,7 +8,7 @@ let transporter = nodemailer.createTransport({
   requireTLS: true,
   auth: {
     user: "itmemario2012@gmail.com",
-    pass: "Arches2016$",
+    pass: "Arches2019$",
   },
 });
 
