@@ -3,7 +3,7 @@ const app = express();
 
 const cors = require("cors");
 const { schema } = require("./validate");
-const { sendEmail } = require("./mail");
+const { sendEmail } = require("./mail2");
 
 app.use(express.json({ extended: false }));
 app.use(cors());
@@ -13,7 +13,7 @@ app.post("/form", async (req, res) => {
   try {
     await schema.validate(req.body);
     const ok = await sendEmail(req.body);
-    
+
     if (!ok) {
       throw new Error("Email sender failed ;(");
     }
